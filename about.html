@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles/about.css">
+  <script src='./showMenu.js'></script>
+  <title>Art Flowers Gallery</title>
+</head>
+
+<body>
+  <div class="about-container" onclick="hideMenu()">
+    <nav class="main-nav about-nav">
+      <div class="burger-field" onclick="showMenu()">
+        &#9776;
+        <ul class="burger-menu" onclick="event.stopPropagation()">
+          <li><a class="burger-menu-link" href="./index.html">Home</a></li>
+          <li><a class="burger-menu-link" href="./services.html">Services</a></li>
+          <li><a class="burger-menu-link" href="./locations.html">Locations</a></li>
+          <li><a class="burger-menu-link" href="./contact.html">Contacts</a></li>
+          <li><a class="burger-menu-link" href="./about.html">About Us</a></li>
+          <li><a class="burger-menu-link" href="./gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <select class="lang-select" name="lang" id="lang-select">
+        <option value="En">En</option>
+        <option value="It">It</option>
+      </select>
+      <div class="main-logo">
+        <div>Art flowers</div>
+        <div>gallery</div>
+      </div>
+    </nav>
+    <div class="about-logo">About Us</div>
+    <div class="about-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</div>
+    <section class="about-section sec1">
+      <div class="section-content">
+        <div class="section-title sec1-title1">The Story</div>
+        <div class="section-column sec1-col1">
+          <article class="column-text sec1-col1-text1">
+            <div class="column-text-dash sec1-col1-dash1">—</div>
+            <div class="column-text-title sec1-col1-title1">
+              Fusce eget mi ut leo sodales interdum sit amet ut nunc. Mauris vitae tellus id quam.
+            </div>
+            <div class="column-text-body sec1-col1-body1">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+              explicabo.
+            </div>
+            <div class="column-text-body sec1-col1-body2">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem aperiam.
+            </div>
+            <div class="column-text-body sec1-col1-body3">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+              explicabo.
+            </div>
+          </article>
+        </div>
+        <div class="section-column sec1-col2">
+          <article class="column-img">
+            <div class="column-img-body">
+              <img class="sec1-col2-img1" src="./Img/about_img_1.jpg" alt="">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="about-section-gallery">
+    </section>
+    <footer>&#169; Art Flowers Gallery 2019</footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./test.css">
+  <script>
+    let lastImg, currentImg, lastIndex;
+    function openGallery() {
+      let gal = document.querySelector('#back');
+      gal.style.zIndex = '0';
+    }
+    function pickImg() {
+      // console.log('enter');
+      // console.log('last', lastIndex);
+      // console.log('current', currentImg);
+      // console.log(event.currentTarget.className)
+      let elem = document.getElementsByClassName(event.currentTarget.className)[0];
+      // let cls = '.' + event.currentTarget.className.replace(/ /g, '.');
+      // console.log(cls);
+      // console.log(typeof)
+      if (!lastImg) {
+        lastImg = elem;
+        // console.log(lastImg)
+        lastIndex = elem.style.zIndex;
+        console.log(lastIndex)
+      };
+      if (!currentImg) {
+        currentImg = elem;
+        currentImg.style.zIndex = "10";
+      };
+      if (currentImg !== event.currentTarget) {
+        lastImg = currentImg;
+        lastIndex = currentImg.style.zIndex;
+        lastImg.style.zIndex = lastIndex;
+        currentImg = event.currentTarget;
+        currentImg.style.zIndex = "10";
+        // if (lastImg !== currentImg) lastImg.style.zIndex = lastIndex;
+      }
+      console.log('last', lastImg);
+      console.log('current', currentImg);
+      console.log('lastIndex', lastIndex);
+    }
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="back">
+      <div class="gallery-img sec2-img1" onclick="pickImg()"><img src="./Img/about_bkg_1.jpg" alt=""></div>
+      <div class="gallery-img sec2-img2" onclick="pickImg()"><img src="./Img/about_bkg_2.jpg" alt=""></div>
+      <div class="gallery-img sec2-img3" onclick="pickImg()"><img src="./Img/about_bkg_3.jpg" alt=""></div>
+      <div class="gallery-img sec2-img4" onclick="pickImg()"><img src="./Img/about_bkg_4.jpg" alt=""></div>
+    </div>
+    <div id="content">
+      <div class="section sec-bkg">1</div>
+      <div class="section sec-bkg">2</div>
+      <div class="section sec-bkg">3</div>
+      <div class="section sec-gal" onclick="openGallery()"></div>
+    </div>
+  </div>
+</body>
+
+</html>

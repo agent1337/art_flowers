@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant&display=swap');
+
+html {
+  /* font-size: 10px; */
+  font-size: calc(100vw/100);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden auto;
+  width: 100vw;
+  font-family: 'Cormorant', serif;
+}
+
+.gallery-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 5.2vh;
+  padding-bottom: 5vh;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; */
+  box-sizing: border-box;
+  background-color: #95958d;
+  color: black;
+  text-align: center;
+}
+
+.gallery-close {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+.gallery-close svg{
+  width: 1rem;
+  height: 1rem;
+}
+
+/* .gallery-img {
+  width: calc(1155*100vw/2880);
+  height: calc(1430*100vw/2880);
+  margin-bottom: 4.4vh;
+  background: url('../Img/gallery_img_1.jpg') no-repeat top left / 100% 100%
+} */
+.gallery-img {
+  width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 4.4vh;
+}
+
+.gallery-img img{
+  display: block;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 0.1px solid #95958d;
+}
+
+.gallery-description {
+  margin: 0 auto;
+  margin-bottom: 0.8vh;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;  
+  font-weight: 400;
+  color: #000000;
+}
+
+.gallery-title {
+  margin: 0 auto;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.22rem;  
+  font-weight: 400;
+  color: #000000;
+}
+
+@media all AND (max-width: 1366px) {
+  html {
+    font-size: calc(100vw/100*1.5);
+  }
+
+}
+
+@media all AND (max-width: 768px) {
+  html {
+    font-size: calc(100vw/100*2);
+  }
+
+}

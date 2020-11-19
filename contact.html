@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles/contact.css">
+  <script src='./showMenu.js'></script>
+  <!-- <script src='./validateForm.js'></script> -->
+  <title>Art Flowers Gallery</title>
+</head>
+
+<body>
+  <div class="contact-container" onclick="hideMenu()">
+    <nav class="main-nav contact-nav">
+      <div class="burger-field" onclick="showMenu()">
+        &#9776;
+        <ul class="burger-menu" onclick="event.stopPropagation()">
+          <li><a class="burger-menu-link" href="./index.html">Home</a></li>
+          <li><a class="burger-menu-link" href="./services.html">Services</a></li>
+          <li><a class="burger-menu-link" href="./locations.html">Locations</a></li>
+          <li><a class="burger-menu-link" href="./contact.html">Contacts</a></li>
+          <li><a class="burger-menu-link" href="./about.html">About Us</a></li>
+          <li><a class="burger-menu-link" href="./gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <select class="lang-select" name="lang" id="lang-select">
+        <option value="En">En</option>
+        <option value="It">It</option>
+      </select>
+      <div class="main-logo">
+        <div>Art flowers</div>
+        <div>gallery</div>
+      </div>
+    </nav>
+    <div class="contact-logo">Contact</div>
+    <div class="contact-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</div>
+    <section class="contact-section sec1">
+      <div class="section-content">
+        <div class="section-title sec1-title1">Let's chat</div>
+        <div class="section-column sec1-col1">
+          <article class="column-text sec1-col1-text1">
+            <div class="column-text-dash sec1-col1-dash1">—</div>
+            <div class="column-text-body sec1-col1-body1">
+              Arlene Verde</br>
+              Managing Director
+            </div>
+            <div class="column-text-body sec1-col1-body1">
+              +39 347 478 27 87
+            </div>
+          </article>
+          <article class="column-text sec1-col1-text2">
+            <div class="column-text-dash sec1-col1-dash2">—</div>
+            <div class="column-text-body sec1-col1-body2">
+              Antonio Francesco Doppiu Anfossi<br>
+              Creative Director
+            </div>
+            <div class="column-text-body sec1-col1-body2">
+              +39 324 994 51 75
+            </div>
+          </article>
+          <article class="column-text sec1-col1-text3">
+            <div class="column-text-dash sec1-col1-dash3">—</div>
+            <div class="column-text-body sec1-col1-body3">
+              Massimo Mou<br>
+              Floral Manager
+            </div>
+            <div class="column-text-body sec1-col1-body3">
+              +39 327 034 66 75
+            </div>
+          </article>
+        </div>
+        <div class="section-column sec1-col2">
+          <article class="column-text sec1-col2-text1">
+            <div class="column-text-dash sec1-col2-dash1">—</div>
+            <div class="column-text-title sec1-col2-title1">
+              Send us an email
+            </div>
+            <div class="column-text-body sec1-col2-body1">
+              <form class="contact-form">
+                <div class="form-row">
+                  <div class="input-wrapper">
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name"
+                      oninput="validateOnInput()" onblur="validateOnBlur()">
+                    <div class="error error-firstname">The field is required</div>
+                  </div>
+                  <div class="input-wrapper">
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name" oninput="validateOnInput()"
+                      onblur="validateOnBlur()">
+                    <div class="error error-lastname">The field is required</div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="input-wrapper">
+                    <input type="text" id="email" name="email" placeholder="Email" oninput="validateOnInput()"
+                      onblur="validateOnBlur()">
+                    <div class="error error-email">The field is required</div>
+                  </div>
+                  <div class="input-wrapper">
+                    <input type="text" id="phone" name="phone" placeholder="Telephone" oninput="validateOnInput()"
+                      onblur="validateOnBlur()">
+                    <div class="error error-phone">The field is required</div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <label for="reason">Please specify the reason of contact...</label>
+                  <select name="reason" id="reason">
+                    <option value="Reason1">Reason1</option>
+                    <option value="Reason2">Reason2</option>
+                    <option value="Reason3">Reason3</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <textarea id="message" name="message" cols="30" rows="10" placeholder="Message"
+                    oninput="validateOnInput()" onblur="validateOnBlur()"></textarea>
+                  <div class="error error-message">The field is required</div>
+                </div>
+                <button onclick="submitForm()">Send</button>
+                <div class="error error-form">One or more fields have an error. Please check and try again.</div>
+              </form>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section-gallery">
+    </section>
+    <footer>&#169; Art Flowers Gallery 2019</footer>
+  </div>
+
+  <script src='./validateForm.js'></script>
+</body>
+
+</html>

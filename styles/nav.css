@@ -1,0 +1,89 @@
+.main-nav {
+  width: 66%;
+  position: relative;
+  left: -0.5%;
+  display: flex;
+  justify-content: center;
+  line-height: 2.8rem;
+}
+
+.burger-field {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  background-color: white;
+  font-size: 1.1rem;
+  text-align: left;
+  padding-left: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu.active {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  z-index: 1;
+  list-style: none;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.burger-menu a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+  font-size: 1.1rem;
+  line-height: 2.8rem;
+  cursor: pointer;
+}
+
+.burger-menu a:hover {
+  background-color: #efefef;
+}
+
+.lang-select {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 1.1rem;
+  letter-spacing: 0.3rem;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  background-color: black;
+  outline: none;
+  border: none;
+  padding-left: 2rem;
+}
+
+.main-logo {
+  position: absolute;
+  top: 155%;
+  right: -1%;
+  line-height: 1.6rem;
+  font-size: 1rem;
+  letter-spacing: 0.75rem;
+  font-weight: 900;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+@media all AND (max-width: 768px) {
+  .main-nav {
+    width: 100%;
+  }
+
+  .main-logo {
+    right: 1%;
+  }
+}
